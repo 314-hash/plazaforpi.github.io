@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlazaForPi - Decentralized Marketplace</title>
+    <meta name="description" content="The Ultimate Decentralized Marketplace for Pi Network">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="PlazaForPi Logo">
+                <span>PlazaForPi</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search items...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="connect-wallet">Connect Wallet</button>
+                <button class="create-listing">Create Listing</button>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Categories -->
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <button class="category-item active">All Items</button>
+                <button class="category-item">Digital Goods</button>
+                <button class="category-item">Physical Items</button>
+                <button class="category-item">Services</button>
+                <button class="category-item">NFTs</button>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <div class="filter-group">
+                <select class="sort-by">
+                    <option value="newest">Newest First</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+                <div class="price-range">
+                    <input type="number" placeholder="Min π">
+                    <span>to</span>
+                    <input type="number" placeholder="Max π">
+                </div>
+            </div>
+        </section>
+
+        <!-- Items Grid -->
+        <section class="items-grid">
+            <!-- Items will be dynamically added here -->
+            <div class="loading-skeleton">
+                <!-- Skeleton items for loading state -->
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <section class="pagination">
+            <button class="prev-page" disabled><i class="fas fa-chevron-left"></i></button>
+            <div class="page-numbers">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <span>...</span>
+                <button>10</button>
+            </div>
+            <button class="next-page"><i class="fas fa-chevron-right"></i></button>
+        </section>
+    </main>
+
+    <!-- Create Listing Modal -->
+    <div class="modal" id="createListingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Listing</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <!-- Listing form will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Transaction Progress Modal -->
+    <div class="modal" id="transactionModal">
+        <div class="modal-content">
+            <!-- Transaction progress will be injected here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PlazaForPi</h3>
+                <p>The Ultimate Decentralized Marketplace for Pi Network</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PlazaForPi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js" type="application/javascript"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
